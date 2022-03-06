@@ -3,57 +3,62 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport", content="1440px, initial-scale=1.0")
     link(rel="stylesheet", href="style.css")
     title Arei
   body
+    .side-bar
+      button.side-bar__menu
+        img(src="./img/menu.svg", alt="Menu")
+      button.side-bar__shopping-cart
+        img(src="./img/cart.svg", alt="Menu")
+      p.side-bar__hashtag #areioutdoorgear
     header.header
-      button.header__menu
-      img.header__logo(src="", alt="")
-      span.header__login Login
-      span.header__register Register 
+      img.header__logo(src="./img/header-logo.svg", alt="Arei logo")
+      .header__login-wrapper
+        a.header__link(href="#") Login
+        a.header__link(href="#") Register 
     section.title
       h1.title__tagline Move and adventure
       .title__persons-wrapper
         p.title__caption Adventurous Person
         .title__persons
-          img.title__userpic(src="", alt="")
-          img.title__userpic(src="", alt="")
-          img.title__userpic(src="", alt="")
-          div.title__userpic 8+
-    section.content
-      .statistics
-        p.statistics__caption Outdoor & Sporting Goods Company 
-        a.statistics__link(href="") EXPLORE MORE
-        p.statistics__description We have more special goods for you 🚀
-        .statistics__products 
-          span.statistics__first-line More than
-          span.statistics__second-line 50+
-          span.statistics__third-line adventure product
-        .statistics__outlets 
-          span.statistics__first-line More than
-          span.statistics__second-line 75+
-          span.statistics__third-line outlet in Indonesia
-        .bottom 
-          .bottom__wrapper
-            img.bottom__image(src="", alt="")
-            span.bottom__first-line Waranty 
-            span.bottom__second-line Lifetime
-          .bottom__wrapper 
-            img.bottom__image(src="", alt="")
-            span.bottom__first-line Payment
-            span.bottom__second-line Easy & Safe
-      .goods
-        img.goods__large-picture(src="", alt="")
-        .goods__advertise-wrapper
-          p.goods__title December give away
-          button.goods__prev-button 
-          .goods__item
-          img.goods__item-picture(src="", alt="")
-          button.goods__next-button 
-          p.goods__item-title Ransel Genali 25L 01
-        img.goods__small-picture(src="", alt="")
-        img.goods__logo(src="", alt="")
-    .side
-      p.side__hashtag #areioutdoorgear
-      button.side__shopping-cart
+          img.title__userpic(src="./img/user1.jpg", alt="Vladimir")
+          img.title__userpic(src="./img/user2.jpg", alt="Anton")
+          img.title__userpic(src="./img/user3.jpg", alt="Anna")
+          .title__more-users 8+
+    .statistic
+      p.statistic__caption Outdoor & Sporting Goods Company 
+      a.statistic__link(href="#") EXPLORE MORE 
+        img.statistic__link-arrow(src="./img/rarrow.svg", alt="More")
+      p.statistic__description We have more special goods for you 🚀
+      .statistic__wrapper
+        .statistic__products
+          p.statistic__first-line More than
+          p.statistic__second-line 50+
+          p.statistic__third-line adventure product
+        .statistic__outlets 
+          p.statistic__first-line More than
+          p.statistic__second-line 75+
+          p.statistic__third-line outlet in Indonesia
+    .footer 
+      .footer__wrapper
+        img.footer__image(src="", alt="")
+        span.footer__first-line Waranty 
+        span.footer__second-line Lifetime
+      .footer__wrapper 
+        img.footer__image(src="", alt="")
+        span.footer__first-line Payment
+        span.footer__second-line Easy & Safe
+    .products
+      img.products__large-picture(src="", alt="")
+      .products__advertise-wrapper
+        p.products__title December give away
+        button.products__prev-button 
+        .products__item
+        img.products__item-picture(src="", alt="")
+        button.products__next-button 
+        p.products__item-title Ransel Genali 25L 01
+      img.products__small-picture(src="", alt="")
+      img.products__logo(src="", alt="")
+    
