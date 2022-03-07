@@ -4,7 +4,6 @@
 body {
   width: 1440px;
   box-shadow: 0 0 5px rgba(0, 0, 0, .1);
-  height: 100vh;
   margin: 0 auto;
   font-family: 'Lexend Deca', sans-serif;
   letter-spacing: -1px;
@@ -14,14 +13,14 @@ body {
     "side title title"
     "side statistic products"
     "footer footer products";
-  grid-template-columns: 128px 1fr 1fr;
-  grid-template-rows: 215px 1fr 468px 200px;
+  grid-template-columns: 128px auto 668px;
+  grid-template-rows: 215px auto 468px 200px;
   gap: 0;
 }
 
 .side-bar {
   grid-area: side;
-  width: 128px;
+  width: 127px;
   display: flex;
   flex-direction: column;
   border-right: 1px #D1D6E0 solid;
@@ -69,6 +68,7 @@ body {
   width: 212px;
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
   padding: 10px;
 }
 
@@ -119,7 +119,6 @@ body {
   border-radius: 50%;
   background-color: #FFE7E5;
   margin-left: -21px;
-  cursor: pointer;
 }
 
 .title__more-users {  
@@ -133,7 +132,6 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .title__userpic:first-of-type {
@@ -202,11 +200,186 @@ body {
   margin: 0;
 }
 
-.products {  
-  grid-area: products;
-}
-
 .footer {
   grid-area: footer;
+  background-color: #2B2B35;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 110px 0 75px;
+}
 
+.footer__block-wrapper {
+  display: flex;
+}
+
+.footer__image {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.footer__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__first-line {
+  font-size: 14px;
+  color: #B5B5C2;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.footer__second-line {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 4px 0 0 0;
+}
+
+.products {  
+  grid-area: products;
+  display: flex;
+}
+
+.products__logo {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 284px;
+  right: 384px;
+}
+
+.products__large-picture {
+  width: 335px;
+  height: 668px;
+}
+
+.products__right-block {
+  margin-left: -1px;
+}
+
+.products__small-picture {
+  width: 334px;
+  height: 334px;
+}
+
+.products__advertise-wrapper {
+  background-color: #2B2B35;
+  color: white;
+  width: 334px;
+  height: 334px;
+  padding: 24px 0 34px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products__title {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+.products__slider-wrapper {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products__button {
+  background-color: unset;
+  border: none;
+}
+
+.previous-button {
+  margin-right: -10px;
+  z-index: 1;
+  cursor: pointer;
+  height: 10px;
+}
+
+.next-button {
+  margin-left: -10px;
+  z-index: 1;
+  cursor: pointer;
+  height: 10px;
+}
+
+.products__button-circle {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #D93A31;
+  opacity: 0;
+  transition: opacity ease-in-out .2s;  
+  z-index: -1;
+  top: -22px;
+}
+
+.next-circle {
+  left: 28px;
+}
+
+.previous-circle {
+  left: -10px;
+}
+
+.previous-button:hover > .previous-circle {  
+  opacity: 1;
+}
+
+.next-button:hover > .next-circle {  
+  opacity: 1;
+}
+
+.products__item-wrapper-outer {
+  width: 196px;
+  height: 196px;
+  background-color: #404049;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color ease-in .3s;
+  cursor: pointer;
+}
+
+.products__item-wrapper-outer:hover {
+  background-color: #53535b;
+}
+
+.products__item-wrapper-inner {
+  width: 150px;
+  height: 150px;
+  background-color: #53535b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products__item-title {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 30px;
+  text-decoration: underline;
+  letter-spacing: normal;
+}
+
+.clickable {
+  transition: opacity ease-in .3s;
+  cursor: pointer;
+}
+
+.clickable:hover {
+  opacity: .6;
 }

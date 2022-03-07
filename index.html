@@ -9,24 +9,24 @@
   </head>
   <body>
     <div class="side-bar">
-      <button class="side-bar__menu"><img src="./img/menu.svg" alt="Menu"></button>
-      <button class="side-bar__shopping-cart"><img src="./img/cart.svg" alt="Menu"></button>
+      <button class="side-bar__menu clickable"><img src="./img/menu.svg" alt="Menu"></button>
+      <button class="side-bar__shopping-cart clickable"><img src="./img/cart.svg" alt="Menu"></button>
       <p class="side-bar__hashtag">#areioutdoorgear</p>
     </div>
     <header class="header"><img class="header__logo" src="./img/header-logo.svg" alt="Arei logo">
-      <div class="header__login-wrapper"><a class="header__link" href="#">Login</a><a class="header__link" href="#">Register </a></div>
+      <div class="header__login-wrapper"><a class="header__link clickable" href="#">Login</a><a class="header__link clickable" href="#">Register </a></div>
     </header>
     <section class="title">
       <h1 class="title__tagline">Move and adventure</h1>
       <div class="title__persons-wrapper">
         <p class="title__caption">Adventurous Person</p>
         <div class="title__persons"><img class="title__userpic" src="./img/user1.jpg" alt="Vladimir"><img class="title__userpic" src="./img/user2.jpg" alt="Anton"><img class="title__userpic" src="./img/user3.jpg" alt="Anna">
-          <div class="title__more-users">8+</div>
+          <div class="title__more-users clickable">8+</div>
         </div>
       </div>
     </section>
     <div class="statistic">
-      <p class="statistic__caption">Outdoor & Sporting Goods Company </p><a class="statistic__link" href="#">EXPLORE MORE <img class="statistic__link-arrow" src="./img/rarrow.svg" alt="More"></a>
+      <p class="statistic__caption">Outdoor & Sporting Goods Company </p><a class="statistic__link clickable" href="#">EXPLORE MORE <img class="statistic__link-arrow" src="./img/rarrow.svg" alt="More"></a>
       <p class="statistic__description">We have more special goods for you 🚀</p>
       <div class="statistic__wrapper">
         <div class="statistic__products">
@@ -42,17 +42,37 @@
       </div>
     </div>
     <div class="footer"> 
-      <div class="footer__wrapper"><img class="footer__image" src="" alt=""><span class="footer__first-line">Waranty </span><span class="footer__second-line">Lifetime</span></div>
-      <div class="footer__wrapper"> <img class="footer__image" src="" alt=""><span class="footer__first-line">Payment</span><span class="footer__second-line">Easy & Safe</span></div>
+      <div class="footer__block-wrapper"><img class="footer__image" src="./img/waranty.svg" alt="Waranty picture">
+        <div class="footer__text-wrapper">
+          <p class="footer__first-line">Waranty</p>
+          <p class="footer__second-line">Lifetime</p>
+        </div>
+      </div>
+      <div class="footer__block-wrapper"> <img class="footer__image" src="./img/payment.svg" alt="Payment picture">
+        <div class="footer__text-wrapper">
+          <p class="footer__first-line">Payment</p>
+          <p class="footer__second-line">Easy & Safe</p>
+        </div>
+      </div>
     </div>
-    <div class="products"><img class="products__large-picture" src="" alt="">
-      <div class="products__advertise-wrapper">
-        <p class="products__title">December give away</p>
-        <button class="products__prev-button"> </button>
-        <div class="products__item"></div><img class="products__item-picture" src="" alt="">
-        <button class="products__next-button"> </button>
-        <p class="products__item-title">Ransel Genali 25L 01</p>
-      </div><img class="products__small-picture" src="" alt=""><img class="products__logo" src="" alt="">
+    <div class="products"><img class="products__large-picture" src="./img/large.jpg" alt="Photo">
+      <div class="products__right-block">
+        <div class="products__advertise-wrapper">
+          <p class="products__title">December give away</p>
+          <div class="products__slider-wrapper">
+            <button class="products__button previous-button"><img src="./img/larrow.svg" alt="Previous">
+              <div class="products__button-circle previous-circle"></div>
+            </button>
+            <div class="products__item-wrapper-outer">
+              <div class="products__item-wrapper-inner"><img class="products__item-picture" src="./img/ransel.png" alt="Product"></div>
+            </div>
+            <button class="products__button next-button"><img src="./img/rarrow.svg" alt="Next">
+              <div class="products__button-circle next-circle"></div>
+            </button>
+          </div>
+          <p class="products__item-title clickable">Ransel Genali 25L 01</p>
+        </div><img class="products__small-picture" src="./img/small.jpg" alt="Photo">
+      </div><img class="products__logo" src="./img/circle-logo.svg" alt="Arei logo">
     </div>
   </body>
 </html>

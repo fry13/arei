@@ -8,16 +8,16 @@ html(lang="en")
     title Arei
   body
     .side-bar
-      button.side-bar__menu
+      button.side-bar__menu.clickable
         img(src="./img/menu.svg", alt="Menu")
-      button.side-bar__shopping-cart
+      button.side-bar__shopping-cart.clickable
         img(src="./img/cart.svg", alt="Menu")
       p.side-bar__hashtag #areioutdoorgear
     header.header
       img.header__logo(src="./img/header-logo.svg", alt="Arei logo")
       .header__login-wrapper
-        a.header__link(href="#") Login
-        a.header__link(href="#") Register 
+        a.header__link.clickable(href="#") Login
+        a.header__link.clickable(href="#") Register 
     section.title
       h1.title__tagline Move and adventure
       .title__persons-wrapper
@@ -26,10 +26,10 @@ html(lang="en")
           img.title__userpic(src="./img/user1.jpg", alt="Vladimir")
           img.title__userpic(src="./img/user2.jpg", alt="Anton")
           img.title__userpic(src="./img/user3.jpg", alt="Anna")
-          .title__more-users 8+
+          .title__more-users.clickable 8+
     .statistic
       p.statistic__caption Outdoor & Sporting Goods Company 
-      a.statistic__link(href="#") EXPLORE MORE 
+      a.statistic__link.clickable(href="#") EXPLORE MORE 
         img.statistic__link-arrow(src="./img/rarrow.svg", alt="More")
       p.statistic__description We have more special goods for you 🚀
       .statistic__wrapper
@@ -42,23 +42,32 @@ html(lang="en")
           p.statistic__second-line 75+
           p.statistic__third-line outlet in Indonesia
     .footer 
-      .footer__wrapper
-        img.footer__image(src="", alt="")
-        span.footer__first-line Waranty 
-        span.footer__second-line Lifetime
-      .footer__wrapper 
-        img.footer__image(src="", alt="")
-        span.footer__first-line Payment
-        span.footer__second-line Easy & Safe
+      .footer__block-wrapper
+        img.footer__image(src="./img/waranty.svg", alt="Waranty picture")
+        .footer__text-wrapper
+          p.footer__first-line Waranty
+          p.footer__second-line Lifetime
+      .footer__block-wrapper 
+        img.footer__image(src="./img/payment.svg", alt="Payment picture")
+        .footer__text-wrapper
+          p.footer__first-line Payment
+          p.footer__second-line Easy & Safe
     .products
-      img.products__large-picture(src="", alt="")
-      .products__advertise-wrapper
-        p.products__title December give away
-        button.products__prev-button 
-        .products__item
-        img.products__item-picture(src="", alt="")
-        button.products__next-button 
-        p.products__item-title Ransel Genali 25L 01
-      img.products__small-picture(src="", alt="")
-      img.products__logo(src="", alt="")
+      img.products__large-picture(src="./img/large.jpg", alt="Photo")
+      .products__right-block
+        .products__advertise-wrapper
+          p.products__title December give away
+          .products__slider-wrapper
+            button.products__button.previous-button
+              img(src="./img/larrow.svg", alt="Previous")              
+              .products__button-circle.previous-circle
+            .products__item-wrapper-outer
+              .products__item-wrapper-inner
+                img.products__item-picture(src="./img/ransel.png", alt="Product")
+            button.products__button.next-button
+              img(src="./img/rarrow.svg", alt="Next")            
+              .products__button-circle.next-circle
+          p.products__item-title.clickable Ransel Genali 25L 01
+        img.products__small-picture(src="./img/small.jpg", alt="Photo")
+      img.products__logo(src="./img/circle-logo.svg", alt="Arei logo")
     
