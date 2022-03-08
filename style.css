@@ -6,7 +6,7 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, .1);
   margin: 0 auto;
   font-family: 'Lexend Deca', sans-serif;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
   display: grid;
   grid-template-areas:
     "side header header"
@@ -14,19 +14,20 @@ body {
     "side statistic products"
     "footer footer products";
   grid-template-columns: 128px auto 668px;
-  grid-template-rows: 215px auto 468px 200px;
+  grid-template-rows: 215px auto 504px 200px;
   gap: 0;
 }
 
 .side-bar {
   grid-area: side;
-  width: 127px;
+  width: 128px;
   display: flex;
   flex-direction: column;
   border-right: 1px #D1D6E0 solid;
   justify-content: space-between;
   align-items: center;
-  padding: 55px 0;
+  padding: 52px 3px 56px 0;
+  box-sizing: border-box;
 }
 
 .side-bar__menu {
@@ -41,13 +42,15 @@ body {
   background-color: unset;
   width: 60px;
   height: 60px;
+  margin-top: 200px;
 }
 
 .side-bar__hashtag {
   writing-mode: sideways-lr;  
   text-transform: uppercase;
   font-size: 16px;
-  height: 100px;
+  letter-spacing: -.3px;
+  margin: 0 0 0 -4px;
 }
 
 .header {
@@ -55,7 +58,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 37px 85px 0 76px;
+  padding: 37px 86px 0 76px;
   height: fit-content;
 }
 
@@ -65,22 +68,23 @@ body {
 }
 
 .header__login-wrapper {
-  width: 212px;
+  width: 192px;
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 2px;
+  padding: 5px;
 }
 
 .header__link {
   text-transform: uppercase;
   font-size: 18px;
   color: #000;
+  letter-spacing: -0.4px;
 }
 
 .title {
   grid-area: title;
-  padding: 0 98px 0 76px;
+  padding: 0 78px 0 76px;
   display: flex;
   justify-content: space-between;
 }
@@ -95,7 +99,7 @@ body {
 }
 
 .title__persons-wrapper {
-  width: 240px;
+  width: 260px;
   height: 132px;
 }
 
@@ -105,42 +109,45 @@ body {
   line-height: 40px;
   color: #9497A8;
   margin: 0;
+  letter-spacing: -0.4px;
+  margin-left: 4px;
 }
 
 .title__persons {
-  margin-top: 22px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
 }
 
 .title__userpic {
-  width: 70px;
-  height: 70px;
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
   background-color: #FFE7E5;
-  margin-left: -21px;
+  margin-left: -23px;
 }
 
 .title__more-users {  
-  width: 70px;
-  height: 70px;
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
   background-color: #FFE7E5;
   color: #D93A31;
   font-size: 24px;
-  margin-left: -21px;
+  margin-left: -23px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  letter-spacing: -0.4px;
 }
 
 .title__userpic:first-of-type {
- margin-left: 0;
+ margin-left: 2px;
 }
 
 .statistic {  
   grid-area: statistic;
-  margin-left: 76px;
+  margin: 18px 0 0 76px;
 }
 
 .statistic__caption {
@@ -148,11 +155,13 @@ body {
   font-weight: 600;
   line-height: 100px;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
 }
 
 .statistic__link {
   display: flex;
-  width: 249px;
+  width: 243px;
   height: 60px;
   background-color: #D93A31;
   color: white;
@@ -161,6 +170,9 @@ body {
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
+  letter-spacing: -.2px;
+  margin-top: 14px;
+  padding-left: 6px;
 }
 
 .statistic__link-arrow {
@@ -175,8 +187,8 @@ body {
 
 .statistic__wrapper {
   display: flex;
-  margin-top: 80px;
-  width: 470px;
+  margin: 90px 0 0 0;
+  width: 452px;
   justify-content: space-between;
 }
 
@@ -184,20 +196,22 @@ body {
   font-size: 14px;
   font-weight: 300;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 0 5px;
+  letter-spacing: normal;
 }
 
 .statistic__second-line {
   font-size: 80px;
   font-weight: 800;
-  margin: 0;
+  margin: -3px 0 0 0;
 }
 
 .statistic__third-line {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 0;
+  margin: -2px 0 0 5px;
+  letter-spacing: normal;
 }
 
 .footer {
@@ -206,7 +220,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 110px 0 75px;
+  padding: 0 116px 0 75px;
 }
 
 .footer__block-wrapper {
@@ -230,19 +244,22 @@ body {
   color: #B5B5C2;
   text-transform: uppercase;
   margin: 0;
+  letter-spacing: normal;
 }
 
 .footer__second-line {
   font-size: 24px;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  margin: 4px 0 0 0;
+  margin: 6px 0 0 0;
+  letter-spacing: normal;
 }
 
 .products {  
   grid-area: products;
   display: flex;
+  margin-top: 36px;
 }
 
 .products__logo {
@@ -272,7 +289,7 @@ body {
   color: white;
   width: 334px;
   height: 334px;
-  padding: 24px 0 34px 0;
+  padding: 25px 0 34px 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -286,6 +303,7 @@ body {
   font-size: 20px;
   line-height: 40px;
   font-weight: 600;
+  letter-spacing: -.3px;
 }
 
 .products__slider-wrapper {  
